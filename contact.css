@@ -1,0 +1,13 @@
+p
+{
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+}
+div
+{
+    border: 2px solid grey;
+    position: relative;
+    width: 50%;
+    left: 25%;
+    margin-top: 15%;
+}

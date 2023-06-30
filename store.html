@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAM Store</title>
+    <link rel="stylesheet" href="store.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="buttons.css">
+</head>
+<body>
+    <div class="top">
+        <button id="Color" class="Color"><img class="colors" src="switch_color_button.png"></button><a href="contacts.html"><button id="Contact" class="Contact"><img class="contact" src="contact.png"></button></a><button id="Restart" class="Restart"><img class="home" src="house.png"></button><button id="Add" class="Add" onclick="CreateElement()">Add</button><button id="ToSearch" class="ToSearch" onclick="SearchElement()">Search</button><input type="text" id="name" name="name" required minlength="10" maxlength="100" size="10" placeholder="Search" class="Search">
+        <h1>RAM Store</h1>
+    </div> 
+    <label id="s1">Sort: </label><select id="sort" class="sorting">
+        <option value="none">-----</option>
+        <option value="models">Models</option>
+        <option value="pur">Purposes</option>
+        <option value="typ">Types</option>
+        <option value="vol">Volumes</option>
+        <option value="bar">Bars</option>
+    </select>
+    <label id="s2">In size: </label><select id="size" class="sizing">
+        <option value="Bigger">Bigger</option>
+        <option value="Lower">Lower</option>
+    </select>
+    <p class="err" id="err">You don't have any element! So click 'Add' to add element!</p>
+    <p class="err_2" id="err_2">No one with this type!</p>
+    <p class="err_3" id="err_3">You are confused somewhere or there is no such thing!</p>
+    <center><div id="createObj" class="create">
+        <div class = "buildier">
+            <div class = "window">
+                <div class="header">
+                    <label class="title">RAMs</label>
+                    <div class="times"><center>&times;</center></div>
+                </div>
+                <div class="bodyer">
+                    <center><label for="names" class="label1">Producer/Model:</label>
+                    <input type="text" id="names" name="name" required minlength="10" maxlength="1000" size="10" placeholder="Input the name of RAMs">
+                    <br><label for="purposes" class="label2">Purpose:</label>
+                    <select id="purposes" name="purpose">
+                        <option value="PC">PC</option>
+                        <option value="Laptop">Laptop</option>
+                    </select>
+                    <br><label for="types" class="label3">Types:</label>
+                    <select id="types" name="type">
+                        <option value="DDR5">DDR5</option>
+                        <option value="DDR4">DDR4</option>
+                        <option value="DDR3">DDR3</option>
+                        <option value="DDR2">DDR2</option>
+                        <option value="DDR1">DDR1</option>
+                    </select>
+                    <br><label for="volume" class="label4">Volume of RAMs(GB):</label>
+                    <input type="text" id="volume" name="volume" required minlength="1" maxlength="5" size="10" placeholder="Input the volume of RAMs(max 100)">
+                    <br><label for="bars">The number of bars in the set:</label>
+                    <input type="text" id="bars" name="bars" required minlength="1" maxlength="5" size="10" placeholder="Input the number of bars of RAMs(max 4)">
+                    <div class="image" id="image"><img id="random_img"></div><br>
+                    <br><label for="photo">Select a photo:</label>
+                    <input class="files" type="file" id="photo" accept=".jpg, .jpeg, .png"></center>
+                </div>
+                <div class="footer">
+                    <center><button type="button" class = "button1" id = "Confirm" onclick="CreateElement()">Confirm</button><button class = "button2" id = "Delete">Delete</button></center>
+                </div>
+            </div>
+        </div>
+    </div></center>
+    <center><div id="editObj" class="edit">
+        <div class = "buildier">
+            <div class = "window">
+                <div class="header">
+                    <label class="title">RAMs</label>
+                    <div class="times_2"><center>&times;</center></div>
+                </div>
+                <div class="bodyer">
+                    <center><label for="names" class="label1">Producer/Model:</label>
+                    <input type="text" id="namimg" name="name" required minlength="10" maxlength="1000" size="10" placeholder="Input the name of RAMs">
+                    <br><label for="purposes" class="label2">Purpose:</label>
+                    <select id="purposimg" name="purpose">
+                        <option value="PC">PC</option>
+                        <option value="Laptop">Laptop</option>
+                    </select>
+                    <br><label for="types" class="label3">Types:</label>
+                    <select id="typimg" name="type">
+                        <option value="DDR5">DDR5</option>
+                        <option value="DDR4">DDR4</option>
+                        <option value="DDR3">DDR3</option>
+                        <option value="DDR2">DDR2</option>
+                        <option value="DDR1">DDR1</option>
+                    </select>
+                    <br><label for="volume" class="label4">Volume of RAMs(GB):</label>
+                    <input type="text" id="volumimg" name="volume" required minlength="1" maxlength="5" size="10" placeholder="Input the volume of RAMs(max 100)">
+                    <br><label for="bars">The number of bars in the set:</label>
+                    <input type="text" id="barimg" name="bars" required minlength="1" maxlength="5" size="10" placeholder="Input the number of bars of RAMs(max 4)">
+                    <div class="image" id="images"><img id="random_imgs"></div><br>
+                    <br><label for="photo">Select a photo:</label>
+                    <input class="files" type="file" id="photos" accept=".jpg, .jpeg, .png"></center>
+                </div>
+                <div class="footer">
+                    <center><button type="button" class = "button1" id = "Edit">Confirm</button></center>
+                </div>
+            </div>
+        </div>
+    </div></center>
+    <script src="store.js"></script>
+</body>
+</html>
